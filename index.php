@@ -1,20 +1,28 @@
 <?
-#Страница Регистрации
+session_start();
+#Главная Страница
 #CMS ZephCMS maded by ZephyR http://vk.com/el9vanbys
 #Если не знаешь - не лезь!
-session_start();
 ?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 </head>
 <body>
+<?
+if(!empty($_SESSION['login'])){
+?>
 <form method='post' action='posts/auth_post.php'>
-Ваш логин : </br><input type='text' name='login'></br>
-Ваш пароль : </br><input type='password' name='password'></br>
-Ваш пароль ещё раз : </br><input type='password' name='password1'></br>
-Ваш E-Mail : </br><input type='text' name='email'></br>
-<input type='submit' name='submit' value='Регистрация'>
+Логин : </br><input type='text' name='login'></br>
+Пароль : </br><input type='password' name='password'></br>
+<input type='submit' name='submit' value='Войти'>
 </form>
+<?
+}else{
+  echo "Привет,$_SESSION[login] .";
+}
+}
+?>
 </body>
+</html>
 </html>
