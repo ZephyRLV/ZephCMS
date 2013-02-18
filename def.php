@@ -38,7 +38,7 @@ class template
                 return true;
         }
 }
-include('config/database_config.php');
+include('database_config.php');
 $content = "
 <center><h4>Вход</h4></center><hr>
 <form method='post' action='posts/auth_post.php'>
