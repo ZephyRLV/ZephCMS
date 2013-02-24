@@ -1,10 +1,10 @@
-<?
+<?php //не везде short-теги включены, на будущее. Это не есть канонично.
 #Главная Страница
 #CMS ZephCMS maded by ZephyR http://vk.com/el9vanbys
-#Если не знаешь - не лезь!
+#Если не знаешь - не лезь! // А если знаешь - еби гусей!
 session_start();
-require_once('def.php');
-$resultat = mysql_query("SELECT * FROM `news`");
+require_once('def.php'); 
+$result = mysql_query("SELECT * FROM `news`"); //resultat?лолшто?
 $news = array();
 while($myress = mysql_fetch_array($resultat)){
 //$tpl->set('{content}', $myress['content']);
