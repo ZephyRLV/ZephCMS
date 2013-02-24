@@ -47,7 +47,7 @@ $content = "
 <input type='submit' name='submit' value='Войти' class='btn'>
 </form>
 ";
-$res = mysql_query("SELECT `admin` FROM `users` WHERE login='$_SESSION[login]'");
+$res = mysql_query("SELECT `admin` FROM `users` WHERE login='$_SESSION[login]'"); // Ололо, а фильтрация данных?
 $myres = mysql_fetch_array($res);
 if($myres['admin'] == "1"){
 $admin = " </br><a href='admin/'>Админ-панель</a> ";
